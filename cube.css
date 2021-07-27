@@ -1,0 +1,64 @@
+@keyframes kaddu {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    25% {
+        transform: rotateX(180deg) rotateY(0deg) rotateZ(0deg);
+    }
+    50% {
+        transform: rotateX(0) rotateY(180deg) rotateZ(180deg);
+    }
+    100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+}
+
+.cube {
+    transform-style: preserve-3d;
+    perspective: 6000px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform: rotateX(45deg);
+    transform: rotateY(45deg);
+    /* transform: rotateZ(45deg); */
+    animation: kaddu 5s ease-in-out infinite alternate;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    transition: all 1s;
+}
+
+#c1 {
+    background-color: yellow;
+    transform: rotateY(90deg) translateZ(-100px) translateX(-100px);
+}
+
+#c2 {
+    background-color: tomato;
+}
+
+#c3 {
+    background-color: saddlebrown;
+    transform: rotateY(90deg) translateZ(100px) translateX(-100px);
+}
+
+#c4 {
+    background-color: olive;
+    transform: translateZ(200px);
+}
+
+#c5 {
+    background-color: gray;
+    transform: rotateX(90deg) translateY(100px) translateZ(-100px);
+}
+
+#c6 {
+    background-color: black;
+    transform: rotateX(90deg) translateZ(100px) translateY(100px);
+}
